@@ -4,6 +4,7 @@ var grpc = require('grpc');
 
 var client = new service.StudentServiceClient('localhost:8899',grpc.credentials.createInsecure());
 var request = new messages.MyRequest();
+
 request.setUsername('张三');
 client.getRealNameByUsername(request,function(error,respData){
     console.log(respData.getRealName());

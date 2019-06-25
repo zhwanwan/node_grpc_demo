@@ -20,7 +20,6 @@ server.addService(grpcService.StudentService.service, {
     biTalk: biTalk
 });
 server.bind('localhost:8899', grpc.ServerCredentials.createInsecure());
-
 server.start();
 
 function getRealNameByUsername(call, callBack) {
